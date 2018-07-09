@@ -9,11 +9,11 @@ import { TodoService } from '../../services/todo.service';
 })
 export class TodoComponent implements OnInit {
 
-  private todos;
-  private newTodo;
+  public todos;
+  public newTodo;
 
 
-  constructor(private todoService : TodoService) { }
+  constructor(public todoService : TodoService) { }
 
   deleteTodo(todo) {
     this.todoService.delete(todo._id).then(() => {
